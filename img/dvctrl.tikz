@@ -1,0 +1,41 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.00000,0.44700,0.74100}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+xmin=4,
+xmax=4.14,
+xlabel style={font=\color{white!15!black}},
+xlabel={Control voltage $V_{ctrl}$ (in \si{\volt})},
+ymin=1.05,
+ymax=1.45,
+ylabel style={font=\color{white!15!black}},
+ylabel={$\frac{\text{d}\, S_{21}}{\text{d}V_{ctrl}}$ (in \si{\dB\per\volt})},
+axis background/.style={fill=white}
+]
+\addplot [color=mycolor1, forget plot]
+  table[row sep=crcr]{%
+4	1.43880520100005\\
+4.01	1.27230424900001\\
+4.02	1.32586605200003\\
+4.03	1.28594927700004\\
+4.04	1.18013134100002\\
+4.05	1.17158151300003\\
+4.06	1.26973448200001\\
+4.07	1.28231734400004\\
+4.08	1.14698095000001\\
+4.09	1.08619047800003\\
+4.1	1.17222119000003\\
+4.11	1.17495084200001\\
+4.12	1.38009048700004\\
+4.13	1.17320019300003\\
+4.14	1.10177366800004\\
+};
+\end{axis}
+\end{tikzpicture}%

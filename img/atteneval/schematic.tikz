@@ -1,0 +1,25 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}
+%\draw (-7.5,8) -- (7.5,8);
+\node[fill=red!30,draw,minimum height=2cm,minimum width=4cm,align=center] (att) at (0,0) {ZX73-2500-S+};
+\node[fill=blue!30,draw,minimum height=2cm,minimum width=3cm,align=center,label={[anchor=north]below:\tiny RF signal generator}] (smc) at (-5.5,0) {R\&S SMC100A};
+\node[fill=blue!30,draw,minimum height=2cm,minimum width=3cm,align=center,label={[anchor=north]below:\tiny RF power meter}] (hp) at (+5.5,0) {HP E4419B};
+\draw[-Latex] (smc) -- node[near end,anchor=south] {\tiny $RF_{in}$}  node[near start,anchor=north] {\tiny $RF_{out}$} (att);
+\draw[-Latex] (att) -- node[near end,anchor=north] {\tiny $RF_{in}$}  node[near start,anchor=south] {\tiny $RF_{out}$} (hp);
+
+\node[fill=green!30,draw,minimum height=2cm,minimum width=3cm,align=center,label={[anchor=north]below:\tiny DAC output}] (dac204) at (-5.5,3) {Keysight\\34972A\\(ch 204)};
+\node[fill=green!30,draw,minimum height=2cm,minimum width=3cm,align=center,label={[anchor=north]below:\tiny DAC output}] (dac205) at (-5.5,6) {Keysight\\34972A\\(ch 205)};
+\node[fill=green!30,draw,minimum height=2cm,minimum width=3cm,align=center,label={[anchor=north]below:\tiny DMM}] (dmm1) at (5.5,3) {Agilent\\34411A};
+\node[fill=green!30,draw,minimum height=2cm,minimum width=3cm,align=center,label={[anchor=north]below:\tiny DMM}] (dmm2) at (5.5,6) {Keysight\\34470A};
+\draw[-Latex] (dac204) -| node[pos=0.9,anchor=east] {\tiny $V+$} ([xshift=-1.5cm]att.north);
+\draw[-Latex] (dac205) -| node[pos=0.955,anchor=west] {\tiny $V_{control}$} ([xshift=1.5cm]att.north);
+\draw (dac205) -- (dmm2);
+\draw[Circle-Latex] ([xshift=-1.56cm]att.north |- dac204) -- (dmm1);
+\draw[Circle-Latex] ([xshift=+1.44cm]att.north |- dac205) -- (dmm2);
+
+\node[fill=green!30,draw,minimum height=2cm,minimum width=4cm,align=center,label={[anchor=south]above:\tiny Temperature probe}] (temp) at (0,9) {Keysight\\34972A\\(ch 101)};
+\draw[-Latex] (att) -- node[pos=0.07,anchor=west] {\tiny $\vartheta_{case}$} (temp);
+
+
+
+\end{tikzpicture}

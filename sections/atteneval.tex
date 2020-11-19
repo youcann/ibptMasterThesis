@@ -1,0 +1,143 @@
+\chapter{Evaluation of a voltage controlled RF attenuator}
+\section{Measurement setup}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[]{img/atteneval/schematic.tikz}
+	\caption{Measurement setup: DUT(red), RF generator/meter(blue), DC sources/ sinks(green)}
+	\label{fig:atteneval-setup}
+\end{figure}
+
+\newpage
+\section{Stability and noise of the DAC outputs}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth,height=0.5\textwidth]{img/atteneval/spec/vplus_time.tikz}
+	\caption{Time signal of DAC channel 204, i.e. $V+$}
+	\label{fig:vplus_time}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth,height=0.5\textwidth]{img/atteneval/spec/vplus_spec.tikz}
+	\caption{Spectrum of DAC channel 204, i.e. $V+$}
+	\label{fig:vplus_spec}
+\end{figure}
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth,height=0.5\textwidth]{img/atteneval/spec/vctrl_time.tikz}
+	\caption{Time signal of DAC channel 205, i.e. $V_{control}$}
+	\label{fig:vctrl_time}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth,height=0.5\textwidth]{img/atteneval/spec/vctrl_spec.tikz}
+	\caption{Spectrum of DAC channel 205, i.e. $V_{control}$}
+	\label{fig:vctrl_spec}
+\end{figure}
+
+
+
+
+
+\newpage
+\section{Relation between $V_{control}$ and the RF attenuation}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth,height=0.5\textwidth]{img/atteneval/ctrl/dmm2_time.tikz}
+	\caption{Control voltage $V_{control}$}
+	\label{fig:vctrl_spec}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth,height=0.5\textwidth]{img/atteneval/ctrl/pm_time.tikz}
+	\caption{RF power}
+	\label{fig:vctrl_spec}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth,height=0.5\textwidth]{img/atteneval/ctrl/temp_time.tikz}
+	\caption{Device temperature}
+	\label{fig:vctrl_spec}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth,height=0.6\textwidth]{img/atteneval/ctrl/ctrl.tikz}
+	\caption{Relation between $V_{control}$ and RF power; showing all data points (in 60 s bins)}
+	\label{fig:vctrl_spec}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth,height=0.6\textwidth]{img/atteneval/ctrl/ctrlgroup.tikz}
+	\caption{Relation between $V_{control}$ and RF power; showing data point grouped by set control voltages with a mean aggregation}
+	\label{fig:vctrl_spec}
+\end{figure}
+
+
+
+\newpage
+\section{Influence of the supply voltage $V+$}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth,height=0.5\textwidth]{img/atteneval/supp/dmm1_time.tikz}
+	\caption{Supply voltage $V+$}
+	\label{fig:vctrl_spec}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth,height=0.5\textwidth]{img/atteneval/supp/pm_time.tikz}
+	\caption{RF power}
+	\label{fig:vctrl_spec}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth,height=0.6\textwidth]{img/atteneval/supp/supp.tikz}
+	\caption{Relation between $V+$ and RF power; showing all data points (in 30 s bins)}
+	\label{fig:vctrl_spec}
+\end{figure}
+
+
+
+
+
+\newpage
+\section{Influence of temperature variations $\vartheta_{case}$}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth,height=0.5\textwidth]{img/atteneval/temp/temp_time.tikz}
+	\caption{Temperature}
+	\label{fig:vctrl_spec}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth,height=0.5\textwidth]{img/atteneval/temp/pm_time.tikz}
+	\caption{RF power}
+	\label{fig:vctrl_spec}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth,height=0.6\textwidth]{img/atteneval/temp/temp.tikz}
+	\caption{Relation between Temperature and RF power; showing all data points}
+	\label{fig:vctrl_spec}
+\end{figure}
+
+
+
+
+\newpage
+\section{Influence of the RF frequency}
+
+
+

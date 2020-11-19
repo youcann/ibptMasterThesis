@@ -1,0 +1,200 @@
+\chapter{RF lab devices}
+
+\section{Benchtop multimeters}
+\subsection{Agilent 34411A}
+\begin{table}[H]
+	\centering
+	\caption{Agilent 34411A specifications}
+	\label{tab:agilent-34411A-specs}
+	\begin{tabular}{ll}
+		\toprule
+		\textbf{Specification} & \textbf{Value}\\
+		\midrule
+		\multicolumn{2}{c}{DC volt}\\
+		Digits & 6~\nicefrac{1}{2}\\
+		Measurement method & cont integrating multi-slope IV A/D converter\\
+		Accuracy (\SI{10}{\volt} range, 24 hours) & \SI{0.0015}{\percent}+\SI{0.0004}{\percent} (\si{\percent} of reading + \si{\percent} of range)\\
+		Bandwidth & \SI{15}{\kHz} (typ.)\\
+		
+		
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\caption{Agilent 34411A some SCPI commands}
+	\label{tab:agilent-34411A-scpi}
+	\begin{tabularx}{\textwidth}{Xll}
+		\toprule
+		\textbf{Description} & \textbf{Example command} & \textbf{Example return}\\
+		\midrule
+		Read current measurement & \texttt{READ?} & \texttt{+2.84829881E+00} (\SI{2.848}{\volt})\\
+		\bottomrule
+	\end{tabularx}
+\end{table}
+
+
+\subsection{Keysight 34470A}
+\begin{table}[H]
+	\centering
+	\caption{Keysight 34470A specifications}
+	\label{tab:keysight-34470A-specs}
+	\begin{tabular}{ll}
+		\toprule
+		\textbf{Specification} & \textbf{Value}\\
+		\midrule
+		\multicolumn{2}{c}{DC volt}\\
+		Digits & 7~\nicefrac{1}{2}\\
+		Measurement method & cont integrating multi-slope IV A/D converter\\
+		Accuracy (\SI{10}{\volt} range, 24 hours) & \SI{0.0008}{\percent}+\SI{0.0002}{\percent} (\si{\percent} of reading + \si{\percent} of range)\\
+		Bandwidth & \SI{15}{\kHz} (typ.)\\
+		
+		
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\caption{Keysight 34470A some SCPI commands}
+	\label{tab:keysight-34470A-scpi}
+	\begin{tabularx}{\textwidth}{Xll}
+		\toprule
+		\textbf{Description} & \textbf{Example command} & \textbf{Example return}\\
+		\midrule
+		Read current measurement & \texttt{READ?} & \texttt{+9.99710196E+00} (\SI{9.997}{\volt})\\
+		\bottomrule
+	\end{tabularx}
+\end{table}
+
+\section{Data Acquisition/Switch Unit}
+\subsection{Keysight 34972A}
+\begin{table}[H]
+	\centering
+	\caption{Keysight 34972A specifications}
+	\label{tab:keysight-34972A-specs}
+	\begin{tabular}{ll}
+		\toprule
+		\textbf{Specification} & \textbf{Value}\\
+		\midrule
+		\multicolumn{2}{c}{34907A (Multifunction module)}\\
+		DAC range & $\pm \SI{12}{\volt}$ \\
+		DAC resolution & 16 bit ($\nicefrac{\SI{24}{\volt}}{2^{16}}$ = \SI{366.21}{\micro\volt} per bit) \\
+		DAC maximum current & \SI{10}{\mA} \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\caption{Keysight 34972A some SCPI commands}
+	\label{tab:keysight-34972A-scpi}
+	\begin{tabularx}{\textwidth}{Xll}
+		\toprule
+		\textbf{Description} & \textbf{Example command} & \textbf{Example return}\\
+		\midrule
+		Read current measurement & \texttt{READ?} & \texttt{+2.00200000E+01} (\SI{20.02}{\degreeCelsius})\\
+		Set DAC voltage of ch 204 to \SI{3.1}{\volt} & \texttt{SOUR:VOLT 3.1,(@204)} & \\
+		\bottomrule
+	\end{tabularx}
+\end{table}
+
+
+\section{Oscilloscopes}
+\subsection{Tektronix MSO64}
+\begin{table}[H]
+	\centering
+	\caption{Tektronix MSO64 specifications}
+	\label{tab:tektronix-MSO64-specs}
+	\begin{tabular}{ll}
+		\toprule
+		\textbf{Specification} & \textbf{Value}\\
+		\midrule
+		Bandwidth & \SI{6}{\GHz} \\
+		Sample rate & \SI{25}{\giga S \per\second}\\
+		ADC resolution & \SI{12}{bit}\\
+		DC gain accuracy (@ \SI{50}{\ohm}, >\SI{2}{\mV\per div}) & \SI{+-2}{\percent}\\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\caption{Tektronix MSO64 some SCPI commands}
+	\label{tab:tektronix-MSO64-scpi}
+	\begin{tabularx}{\textwidth}{Xll}
+		\toprule
+		\textbf{Description} & \textbf{Example command} & \textbf{Example return}\\
+		\midrule
+		Read mean of measurement 1 (current acq.) & \texttt{MEASUrement:MEAS1:RESUlts:CURR:MEAN?} & \texttt{3.0685821787408} \\
+		\bottomrule
+	\end{tabularx}
+\end{table}
+
+\section{RF signal generator}
+\subsection{Rohde and Schwarz SMC100A}
+\begin{table}[H]
+	\centering
+	\caption{Rohde and Schwarz SMC100A specifications}
+	\label{tab:rs-smc100a-specs}
+	\begin{tabular}{ll}
+		\toprule
+		\textbf{Specification} & \textbf{Value}\\
+		\midrule
+		Frequency range & \SI{9}{\kHz} to \SI{3.2}{\GHz}\\
+		Maximum power level & \SI{17}{dBm}\\
+		SSB phase noise (@ \SI{1}{\GHz}, $f_o=\SI{20}{\kHz}$, $BW=\SI{1}{\Hz}$) & \SI{-111}{dBc}\\
+		Level error & $<$\SI{0.9}{\dB}\\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\caption{Rohde and Schwarz SMC100A some SCPI commands}
+	\label{tab:rs-smc100a-scpi}
+	\begin{tabularx}{\textwidth}{Xll}
+		\toprule
+		\textbf{Description} & \textbf{Example command} & \textbf{Example return}\\
+		\midrule
+		Set RF power level to \SI{10.5}{dBm} & \texttt{SOUR:POW 10.5} & \\
+		Set RF frequency to \SI{3.1}{\GHz}& \texttt{SOUR:FREQ:FIX {3.1e9}} & \\
+		Enable the RF output & \texttt{OUTP on} & \\
+		\bottomrule
+	\end{tabularx}
+\end{table}
+
+\section{RF power meter}
+\subsection{HP E4419B}
+\begin{table}[H]
+	\centering
+	\caption{HP E4419B specifications}
+	\label{tab:hp-E4419B-specs}
+	\begin{tabular}{ll}
+		\toprule
+		\textbf{Specification} & \textbf{Value}\\
+		\midrule
+		Digits & 4\\
+		Accuracy (abs. without power sensor) & \SI{+-0.02}{\dB} \\
+		\multicolumn{2}{c}{E4410? (Power sensor)}\\
+		Frequency range & \\
+		Power range & \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\caption{HP E4419B some SCPI commands}
+	\label{tab:hp-E4419B-scpi}
+	\begin{tabularx}{\textwidth}{Xll}
+		\toprule
+		\textbf{Description} & \textbf{Example command} & \textbf{Example return}\\
+		\midrule
+		Measure power on input 1 & \texttt{MEAS1?} & \texttt{+2.89435802E+000} (\SI{2.894}{dBm}) \\
+		\bottomrule
+	\end{tabularx}
+\end{table}
+
+

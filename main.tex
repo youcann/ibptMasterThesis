@@ -1,0 +1,105 @@
+\documentclass[11pt,a4paper,oneside,listof=totoc,headsepline,footsepline,parskip=half,numbers=noenddot,headings=standardclasses]{scrbook}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{newpxtext,newpxmath}
+
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\fancyhead{}
+
+\usepackage{float}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{textcomp}
+\usepackage{mathrsfs}
+\usepackage{siunitx}
+\sisetup{range-phrase=~...~}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{nicefrac}
+%\usepackage{microtype}
+
+%tikz stuff
+\usepackage{tikz}
+\usepackage{tikzscale}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{plotmarks}
+\usetikzlibrary{matrix}
+\pgfplotsset{compat=1.5.1}
+\usepackage[list=false]{subcaption}
+\usepackage[export]{adjustbox}
+\usetikzlibrary{external} %externalize all tikz pictures
+\tikzexternalize[optimize=false,prefix=tikz/]
+
+%urls
+\usepackage[hyphens]{url}
+\def\UrlBreaks{\do\/\do-}
+\usepackage[breaklinks]{hyperref}
+
+%equation variable descriptions
+%aligned:
+\newenvironment{with}
+{\par\vspace{\abovedisplayskip}\noindent\begin{tabular}{>{$}l<{$} @{${}:{}$} l}}
+	{\end{tabular}\par\vspace{\belowdisplayskip}}
+%aligned multiline
+\usepackage{array,tabularx}
+\newenvironment{with*}
+{\par\vspace{\abovedisplayskip}\noindent
+	\tabularx{\columnwidth}{>{$}l<{$} @{${}:{}$} >{\raggedright\arraybackslash}X}}
+{\endtabularx\par\vspace{\belowdisplayskip}}
+
+
+
+%%%%%%%% KIT Physik Vorlage %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[absolute,overlay]{textpos}          
+\usepackage{tikz}                               
+\usepackage{ifthen}                             
+\usepackage[fit,breakall]{truncate}
+
+\newcommand{\thesisauthor}{Marvin-Dennis Noll}
+\newcommand{\thesistopic}{Stability improvements of the FLUTE RF supply}
+\newcommand{\thesisentopic}{nix}
+\newcommand{\thesislongtopic}{}
+\newcommand{\thesisinstitute}{Institute for Beam Physics and Technology (IBPT)}
+\newcommand{\thesisreviewerone}{Prof. Dr.-Ing. John Jelonnek (IHM)}
+\newcommand{\thesisreviewertwo}{Prof. Dr. Anke-Susanne Müller}
+\newcommand{\thesisadvisorone}{} % to use: enter names and uncomment in titlepg
+\newcommand{\thesisadvisortwo}{}
+\newcommand{\thesistimestart}{15.11.2020} % on titlepage
+\newcommand{\thesistimeend}{15.05.2021} % on titlepage
+\newcommand{\thesistimehandin}{15.05.2021} % on second page 'preamble'
+\newcommand{\thesispagehead}{Bachelorarbeit: \thesisentopic} % page heading 
+\newcommand{\changefont}[3]{\fontfamily{#1} \fontseries{#2}%
+	\fontshape{#3} \selectfont}
+\usepackage{vmargin}
+\setpapersize{A4}
+\setmarginsrb{3cm}{1cm}{3cm}{1cm}   % {leftmargin}{topmargin}{rightmargin}...
+{6mm}{7mm}{5mm}{15mm}    			% {bottommargin}{headheight}{headsep}...
+									% {footheight}{footskip}
+\setlength{\marginparwidth}{1.5cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\frontmatter
+%\input{titlepage.tex}
+%\input{pre.tex}
+
+\thispagestyle{empty}
+\pagenumbering{roman}
+\setcounter{page}{0}
+\tableofcontents
+\cleardoublepage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\mainmatter
+%\input{sections/attentest.tex}
+\input{sections/atteneval.tex}
+
+\appendix
+\pagenumbering{Roman}
+\setcounter{page}{0}
+\input{sections/Appendix_devices.tex}
+\end{document}
